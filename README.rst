@@ -169,9 +169,11 @@ Installing the Driver on Linux and macOS
    .. code-block:: bash
 
        $PHP_HOME/bin/php -i | grep '^extension_dir'
+       ## Ideally it should be like this
+       cp modules/pdo_snowflake.so /usr/lib/php/20190902/
 
 #. Copy :code:`cacert.pem` from the :code:`libsnowflakeclient` subdirectory in the repository to the directory containing the
-   PHP configuration files (e.g. :code:`/etc/php/7.2/fpm/conf.d` for PHP-FPM version 7.2 on Ubuntu).
+   PHP configuration files (e.g. :code:`/etc/php/7.4/apache2/conf.d` for PHP-FPM version 7.4 on Ubuntu).
 
 #. In the same directory that contains the PHP configuration files, create a config file named :code:`20-pdo_snowflake.ini` that
    contains the following settings:
