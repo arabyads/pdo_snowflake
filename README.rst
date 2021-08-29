@@ -49,8 +49,10 @@ Building the PHP PDO Driver
 
 The following sections explain how to build the PHP PDO Driver on Linux, macOS, and Windows.
 
-Building the Driver on Linux and macOS
+Building the Driver on Linux and macOS ( PHP7.4)
 --------------------------------------
+
+#. Make sure to install phpize ( sudo apt install php7.4-dev)
 
 #. Download and install the PHP binaries, or build and install PHP from the source code.
 
@@ -74,7 +76,7 @@ Building the Driver on Linux and macOS
 
        git clone https://github.com/snowflakedb/pdo_snowflake.git
        cd pdo_snowflake
-       ./scripts/build_pdo_snowflake.sh
+       bash ./scripts/build_pdo_snowflake.sh
 
 #. Run the following command to verify that the driver can be loaded into memory successfully:
 
